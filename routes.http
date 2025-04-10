@@ -1,0 +1,47 @@
+GET http://localhost:3000/disciplinas
+
+###
+
+GET http://localhost:3000/disciplinas?name=Matemática
+
+###
+
+GET http://localhost:3000/disciplinas/0bb5032d-bc97-4467-877f-6b703a5d66ec
+
+###
+POST http://localhost:3000/disciplinas
+Content-Type: application/json
+
+{
+    "name": "Matemática",
+    "cargaHoraria": 60,
+    "obrigatoria": true
+}
+
+###
+
+POST http://localhost:3000/disciplinas
+Content-Type: application/json
+
+{
+    "name": "Física",
+    "cargaHoraria": 45,
+    "obrigatoria": false
+}   
+
+###
+
+DELETE http://localhost:3000/disciplinas/0bb5032d-bc97-4467-877f-6b703a5d66ec
+
+###
+
+PUT http://localhost:3000/disciplinas/0bb5032d-bc97-4467-877f-6b703a5d66ec
+Content-Type: application/json
+
+{
+    "name": "Matemática II",
+    "cargaHoraria": 60,
+    "obrigatoria": true
+}
+
+###
